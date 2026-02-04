@@ -10,6 +10,27 @@ Esta versión incluye:
 ---
 
 ## Índice
+
+## Aclaración clave: columnas vs márgenes
+
+En escritorio y en móvil la lógica es la misma:
+
+- **Frame/página**: es el ancho total del lienzo (por ejemplo 1440 px).
+- **Márgenes/padding laterales**: espacio de respiración a izquierda y derecha (no son columnas).
+- **Contenedor (área de contenido)**: aquí vive el layout.
+- **Sistema de columnas (12 en desktop / 4 en móvil)**: se dibuja **dentro del contenedor**.
+
+✅ **Las columnas NO incluyen márgenes**.  
+❌ No existen “14 columnas” (12 + 2). Existen: **12 columnas + márgenes/padding**.
+
+Ejemplo numérico (desktop):
+- Frame: 1440 px
+- Márgenes: 80 px + 80 px
+- Contenedor: 1440 − 160 = **1280 px**
+- Las **12 columnas** viven dentro de esos **1280 px**.
+
+---
+
 1. [Qué significa reestructurar de escritorio a móvil](#1-qué-significa-reestructurar-de-escritorio-a-móvil)
 2. [RA1 e IL2–IL9 aplicados al diseño](#2-ra1-e-il2il9-aplicados-al-diseño)
 3. [Principios clave: móvil no es “reducir”](#3-principios-clave-móvil-no-es-reducir)
@@ -55,7 +76,7 @@ Ejemplo (Categoría):
 ### IL3 – Grilla constructiva
 Desktop suele usar 12 columnas; móvil (teléfono) suele usar 4 columnas.
 
-![Grillas 12 vs 4](./assets/01_grillas_12_vs_4.png)
+![Grillas 12 vs 4](./assets/01_grillas_con_margenes_12_vs_4.png)
 
 ### IL5 – Jerarquía visual
 En móvil se refuerza con:
@@ -155,7 +176,7 @@ Regla práctica:
 - **2/4**: cards si van 2 por fila.
 - **4/4**: cards si van 1 por fila.
 
-![Grillas 12 vs 4](./assets/01_grillas_12_vs_4.png)
+![Grillas 12 vs 4](./assets/01_grillas_con_margenes_12_vs_4.png)
 
 ---
 
